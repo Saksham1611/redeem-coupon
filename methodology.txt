@@ -9,3 +9,5 @@ Train the model on different algorithms i) logistic Regression
 
 Make a api kind of service to see if its working fine or not 
 Check the readme template in notion and try to paste the code if that works
+
+We are going with the logres_model, as it has the highest accuracy factor

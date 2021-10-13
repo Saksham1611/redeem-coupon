@@ -9,9 +9,6 @@ def run(fold):
     #load training data (with folds)
     df=pd.read_csv("../input/train_data_folds.csv")
 
-    #load test data for prediction of values
-    df_test=pd.read_csv("../input/test_data.csv")
-
     #all cols are feature except id, redemption_status and kfold
     features=[f for f in df.columns if f not in {'id', 'redemption_status','kfold'}]
 
@@ -20,7 +17,6 @@ def run(fold):
 
     for col in features:
         df.loc[:,col]=df[col].astype(str).fillna("NONE")
-        df_test.loc[:,col]=df[col].astype(str).fillna("NONE")
 
     #get training data using folds
     df_train=df[df.kfold!=fold].reset_index(drop=True)
