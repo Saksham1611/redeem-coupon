@@ -1,0 +1,13 @@
+I think model dispatcher.py is important
+Deal with the cat variables
+Diff between label encoder and one hot encoding and in which model we have to use one?
+#Other cat variables put links in the reference 
+Feature engineering by combining features 
+Train the model on different algorithms i) logistic Regression
+                                        ii) rf
+                                        iii)XgBoost Algorithm 
+
+Make a api kind of service to see if its working fine or not 
+Check the readme template in notion and try to paste the code if that works
+
+We are going with the logres_model, as it has the highest accuracy factor
