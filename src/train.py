@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn import linear_model
 import joblib
+import pickle
 from sklearn import metrics
 from sklearn import preprocessing
 
@@ -31,12 +32,17 @@ if __name__=="__main__":
     #transform training data
     x_train=ohe.transform(df_train[features])
 
+    with open("../models/one_hot.pkl","wb") as one_hot_file:
+        pickle.dump(ohe,one_hot_file)
+
     #transforms validation data 
     x_test=ohe.transform(df_test[features])
 
     #initialize Logistic Regression model
     model= linear_model.LogisticRegression()
 
+    print(f"Shape of x_train {x_train.shape}")
+    print(f"Shape of x_test {x_test.shape}")
     #fit model on training data(ohe)
     model.fit(x_train,df_train.redemption_status.values)
 
@@ -46,6 +52,7 @@ if __name__=="__main__":
 
     #predict on test data
     test_preds=model.predict(x_test)
+    
 
     #make a dataframe
     test_preds= pd.DataFrame(test_preds,columns=['redemption_status'])
