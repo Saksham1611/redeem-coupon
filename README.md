@@ -36,5 +36,5 @@ pip freeze > requirements.txt
 ### Pediction Page
 ![Prediction](/Instructions/prediction.png)
 
-### ppt link regarding the project to briefly summarize output
+#### PPT LINK
 [PPT](https://docs.google.com/presentation/d/1Sc95xFZic_PRJvRdHetufIBHtJKqoADsmEtthK6hcyM/edit#slide=id.p)
